@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE_URL = 'https://ai-flowchart-maker.onrender.com'
+const API_BASE_URL = 'import.meta.env.https://ai-flowchart-maker.onrender.com'
 
 export const generateFlowchart = async (input, mode, orientation = 'horizontal') => {
   try {
