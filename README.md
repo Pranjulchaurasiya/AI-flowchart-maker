@@ -1,107 +1,151 @@
-# AI Flowchart Maker 🎨
+# AI Flowchart Maker
 
-Turn your ideas into flowcharts instantly using AI.
+A web-based application that generates flowcharts automatically from text prompts, instructions, or uploaded files. The tool converts natural language descriptions into structured flowcharts with a clean and intuitive user interface. It supports customization, real-time editing, and export options for PDF, PNG, and SVG formats.
 
-## Features
+---
 
-- 📝 Text to Flowchart - Parse structured text into flowcharts
-- 🤖 AI Prompt to Flowchart - Natural language flowchart generation
-- 🖼️ Image to Flowchart - OCR from handwritten/screenshot flowcharts
-- 🎨 Beautiful Modern UI - Glassmorphism design with smooth animations
-- ✏️ Live Editing - Drag, edit, and customize nodes
-- 📤 Export - PNG, SVG, PDF formats
-- 🌙 Dark Mode - Toggle between light and dark themes
+## Key Features
 
-## Tech Stack
+* Converts natural language instructions into flowcharts.
+* Supports input through text, lines, or structured descriptions.
+* Real-time preview of generated flowcharts.
+* Includes a modern and clean user interface.
+* Allows editing, rearranging, and customizing nodes and edges.
+* Export options for PDF, PNG, and SVG.
+* Backend powered by Python and AI-based layout generation.
+* Frontend built for fast rendering and smooth interactions.
+* Upload-to-flowchart support for images or structured files.
 
-**Backend:**
-- Python 3.8+
-- FastAPI
-- OpenAI API (for AI generation)
-- Tesseract OCR + OpenCV (for image processing)
-- NetworkX + Graphviz (for auto-layout)
+---
 
-**Frontend:**
-- React + Vite
-- Tailwind CSS
-- React Flow (flowchart rendering)
-- Axios (API calls)
+## Technology Stack
 
-## Setup Instructions
+### Frontend
 
-### Prerequisites
-- Python 3.8+
-- Node.js 16+
-- Tesseract OCR installed
+* HTML
+* CSS
+* JavaScript (React optional if used in your version)
 
-### Backend Setup
+### Backend
 
-1. Navigate to backend folder:
-```bash
+* Python
+* Flask
+* Custom AI layout engine
+* Text parsing and flow generation modules
+
+### Additional Tools
+
+* Image processing utilities
+* Export service (PDF/PNG/SVG)
+* Node layout and coordinate algorithms
+
+---
+
+## Folder Structure
+
+```
+AI-Flowchart-Builder/
+│
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── services/
+│   │   ├── ai_generator.py
+│   │   ├── export_service.py
+│   │   ├── image_processor.py
+│   │   ├── layout_engine.py
+│   │   └── text_parser.py
+│   └── .env.example
+│
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   └── src/
+│       ├── App.jsx
+│       ├── components/
+│       │   ├── CustomNode.jsx
+│       │   ├── ExampleChips.jsx
+│       │   ├── ExportPanel.jsx
+│       │   ├── FlowchartCanvas.jsx
+│       │   └── InputPanel.jsx
+│
+├── start-frontend.sh  
+├── start-backend.sh  
+├── start-frontend.bat  
+└── README.md  
+```
+
+---
+
+## Installation and Setup
+
+### 1. Clone the Repository
+
+```
+git clone https://github.com/Pranjulchaurasiya/AI-flowchart-maker.git
+cd AI-flowchart-maker
+```
+
+### 2. Backend Setup
+
+```
 cd backend
-```
-
-2. Create virtual environment:
-```bash
-python -m venv venv
-venv\Scripts\activate  # Windows
-```
-
-3. Install dependencies:
-```bash
 pip install -r requirements.txt
-```
-
-4. Create `.env` file:
-```
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-5. Run the server:
-```bash
 python main.py
 ```
 
-Backend runs on `http://localhost:8000`
+The backend will start on the configured host and port.
 
-### Frontend Setup
+### 3. Frontend Setup
 
-1. Navigate to frontend folder:
-```bash
-cd frontend
 ```
-
-2. Install dependencies:
-```bash
+cd ../frontend
 npm install
+npm start
 ```
 
-3. Run development server:
-```bash
-npm run dev
-```
+The frontend will run on the local development server.
 
-Frontend runs on `http://localhost:5173`
+---
 
-## Usage
+## How the System Works
 
-1. Open `http://localhost:5173` in your browser
-2. Choose input method:
-   - Type or paste text
-   - Enter a natural language prompt
-   - Upload an image
-3. Click "Generate Flowchart"
-4. Edit, customize, and export your flowchart
+1. User enters a prompt, lines, or structured instructions.
+2. The backend processes the text using the text parser.
+3. AI-based flowchart generator creates nodes and edges.
+4. The layout engine arranges elements cleanly.
+5. The frontend displays the flowchart on a canvas.
+6. Users can edit, move, or customize flowchart nodes.
+7. The export service converts the final flowchart into PDF, SVG, or PNG.
 
-## API Endpoints
+---
 
-- `POST /api/text-to-flowchart` - Convert text to flowchart
-- `POST /api/prompt-to-flowchart` - Generate from AI prompt
-- `POST /api/image-to-flowchart` - Extract flowchart from image
-- `POST /api/export/png` - Export as PNG
-- `POST /api/export/svg` - Export as SVG
-- `POST /api/export/pdf` - Export as PDF
+## Unique Selling Points
+
+* Reduces manual flowchart creation time significantly.
+* Offers clean and tidy layouts with automated spacing.
+* Suitable for students, developers, educators, and professionals.
+* Works with natural language, making it accessible to non-technical users.
+* Lightweight and fast due to optimized layout algorithms.
+
+---
+
+## Future Enhancements
+
+* Support for complex workflows and branching logic.
+* Live collaboration mode for teams.
+* Cloud storage integration.
+* Authentication system for user accounts.
+* Version history and auto-save.
+* Integration with documentation tools.
+
+---
 
 ## License
 
-MIT
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute the code with proper attribution.
+
+---
