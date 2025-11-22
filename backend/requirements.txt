@@ -1,0 +1,13 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+python-dotenv==1.0.0
+groq
+opencv-python
+pytesseract
+Pillow
+networkx
+pydantic>=2.10.0
+numpy
+reportlab
+svglib
