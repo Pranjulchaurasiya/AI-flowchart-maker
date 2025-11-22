@@ -1,6 +1,6 @@
 # AI Flowchart Maker
 
-A web-based application that generates flowcharts automatically from text prompts, instructions, or uploaded files. The tool converts natural language descriptions into structured flowcharts with a clean and intuitive user interface. It supports customization, real-time editing, and export options for PDF, PNG, and SVG formats.
+A web-based application that generates flowcharts automatically from text prompts, instructions, or uploaded files. The tool converts natural language descriptions into structured flowcharts with a clean and intuitive user interface. It supports customization, real-time editing, and export options for PDF, PNG,JSON and SVG formats.
 
 # Interface
 <img width="2879" height="1559" alt="image" src="https://github.com/user-attachments/assets/41568b4d-13e9-4d5b-b781-75d327078e2a" />
